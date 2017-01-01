@@ -62,3 +62,28 @@ class Solution:
             p1 = p1.next
             p2 = p2.next
         return p2
+'-------------------------------------------------------------------'
+# 输入一个链表，反转链表后，输出链表的所有元素。
+# -*- coding:utf-8 -*-
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+class Solution:
+# 返回ListNode
+    def ReverseList(self, pHead):
+        # write code here
+        if not pHead:
+            return pHead
+        a = pHead
+        while a:
+            b = a.next
+            if not b:
+                res_head = a
+            if a == pHead:
+                a.next = None
+            else:
+                a.next = pbefore
+            pbefore = a
+            a = b
+        return res_head
